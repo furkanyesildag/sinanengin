@@ -163,9 +163,20 @@ class Bot:
             log(f"!! KILL-SWITCH: toplam drawdown limiti (%{MAX_TOTAL_DD*100:.0f}). Pozisyonlar kapatildi, DURDU.")
 
     def tick(self):
-        ref_df = fetch_recent(REF_SYMBOL, REF_TF, WARMUP_BARS)
+        try:
+            ref_df = fetch_recent(REF_SYMBOL, REF_TF, WARMUP_BARS)
+        except Exception as e:
+            log(f"HATA: NFT ref ({REF_SYMBOL}) cekilemedi, tik atlaniyor: {str(e)[:120]}")
+            return
+        failed = 0
         for sym in SYMBOLS:
-            self._process_symbol(sym, ref_df, act=True)
+            try:
+                self._process_symbol(sym, ref_df, act=True)
+            except Exception as e:
+                failed += 1
+                log(f"ATLA {sym}: veri/isleme hatasi: {str(e)[:100]}")
+        if failed:
+            log(f"  ({failed}/{len(SYMBOLS)} sembol bu tikte atlandi)")
         self._check_killswitch(pd.Timestamp.utcnow())
         snap = self.broker.snapshot()
         log(f"TIK: equity={snap['equity']} mtm={snap['equity_mtm']} "

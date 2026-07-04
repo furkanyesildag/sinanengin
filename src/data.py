@@ -28,15 +28,27 @@ _FEED_FALLBACKS = [
 ]
 
 
+_EX_CACHE: dict = {}
+
+
+def _get_ex(ccxt_id):
+    """Borsa nesnesini tek sefer olustur ve tekrar kullan (rate limiter + markets
+    paylasilir -> 50 sembol ardarda cekilirken IP weight limitine takilmaz)."""
+    if ccxt_id not in _EX_CACHE:
+        ex = getattr(ccxt, ccxt_id)({"enableRateLimit": True})
+        if ccxt_id != "binanceusdm":
+            ex.options = {**getattr(ex, "options", {}), "defaultType": "swap"}
+        _EX_CACHE[ccxt_id] = ex
+    return _EX_CACHE[ccxt_id]
+
+
 def _fetch_raw(symbol: str, timeframe: str, since: int, tf_ms: int, now: int) -> list:
     """Coklu borsa yedegiyle ham OHLCV ceker. Ilk basarili kaynak kazanir."""
     base = symbol.split("/")[0]
     last_err = None
     for ccxt_id, fmt in _FEED_FALLBACKS:
         try:
-            ex = getattr(ccxt, ccxt_id)({"enableRateLimit": True})
-            if ccxt_id != "binanceusdm":
-                ex.options = {**getattr(ex, "options", {}), "defaultType": "swap"}
+            ex = _get_ex(ccxt_id)
             sym = fmt.format(base=base)
             rows, cursor = [], since
             while cursor < now:
