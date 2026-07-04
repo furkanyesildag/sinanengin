@@ -19,24 +19,50 @@ def _exchange() -> ccxt.binanceusdm:
     return ccxt.binanceusdm({"enableRateLimit": True})
 
 
+# Yedek veri kaynaklari: Binance ABD IP'lerinde 451 verirse ( or. GitHub Actions
+# ABD runner'lari) sirayla denenir. (ccxt_id, sembol_bicimi) — perp sembolleri.
+_FEED_FALLBACKS = [
+    ("binanceusdm", "{base}/USDT"),
+    ("okx",         "{base}/USDT:USDT"),
+    ("bybit",       "{base}/USDT:USDT"),
+]
+
+
+def _fetch_raw(symbol: str, timeframe: str, since: int, tf_ms: int, now: int) -> list:
+    """Coklu borsa yedegiyle ham OHLCV ceker. Ilk basarili kaynak kazanir."""
+    base = symbol.split("/")[0]
+    last_err = None
+    for ccxt_id, fmt in _FEED_FALLBACKS:
+        try:
+            ex = getattr(ccxt, ccxt_id)({"enableRateLimit": True})
+            if ccxt_id != "binanceusdm":
+                ex.options = {**getattr(ex, "options", {}), "defaultType": "swap"}
+            sym = fmt.format(base=base)
+            rows, cursor = [], since
+            while cursor < now:
+                batch = ex.fetch_ohlcv(sym, timeframe=timeframe, since=cursor, limit=1500)
+                if not batch:
+                    break
+                rows.extend(batch)
+                if batch[-1][0] <= cursor:
+                    break
+                cursor = batch[-1][0] + tf_ms
+            if rows:
+                return rows
+        except Exception as e:
+            last_err = e
+            continue
+    raise RuntimeError(f"Tum veri kaynaklari basarisiz ({symbol}): {last_err}")
+
+
 def fetch_recent(symbol: str, timeframe: str, bars: int) -> pd.DataFrame:
     """Son `bars` kadar mumu ceker (cache YOK — canli kullanim icin taze veri).
     Not: son eleman OLUSMAKTA olan (kapanmamis) mum olabilir; cagiran tarafta at."""
-    ex = _exchange()
+    import time as _t
     tf_ms = _TF_MS[timeframe]
-    now = ex.milliseconds()
+    now = int(_t.time() * 1000)
     since = now - (bars + 2) * tf_ms
-    rows: list = []
-    cursor = since
-    while cursor < now:
-        batch = ex.fetch_ohlcv(symbol, timeframe=timeframe, since=cursor, limit=1500)
-        if not batch:
-            break
-        rows.extend(batch)
-        last = batch[-1][0]
-        if last <= cursor:
-            break
-        cursor = last + tf_ms
+    rows = _fetch_raw(symbol, timeframe, since, tf_ms, now)
     df = pd.DataFrame(rows, columns=["time", "open", "high", "low", "close", "volume"])
     df = df.drop_duplicates(subset="time").sort_values("time")
     df["time"] = pd.to_datetime(df["time"], unit="ms")
