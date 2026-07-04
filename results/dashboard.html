@@ -1,0 +1,270 @@
+<title>SE NFT+Band V10 — 50 Coin Üretim Sistemi</title>
+<style>
+  :root {
+    --plane:#eaeef2; --surface:#ffffff; --surface-2:#f4f6f9;
+    --ink:#0f1620; --ink-2:#3f4854; --muted:#6b7684;
+    --line:#e2e6ec; --line-2:#cdd3db;
+    --accent:#2a78d6; --pos:#0ca30c; --neg:#d03b3b; --warn:#c98500;
+    --ring:rgba(15,22,32,.08);
+    --shadow:0 1px 2px rgba(15,22,32,.04), 0 8px 24px -12px rgba(15,22,32,.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --plane:#0a0d11; --surface:#151a20; --surface-2:#1b2128;
+      --ink:#eef2f6; --ink-2:#b6bec9; --muted:#7d8794;
+      --line:#242b33; --line-2:#323a44;
+      --accent:#3987e5; --pos:#22b722; --neg:#e05656; --warn:#d99400;
+      --ring:rgba(255,255,255,.09);
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px -14px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"]{--plane:#eaeef2;--surface:#ffffff;--surface-2:#f4f6f9;--ink:#0f1620;--ink-2:#3f4854;--muted:#6b7684;--line:#e2e6ec;--line-2:#cdd3db;--accent:#2a78d6;--pos:#0ca30c;--neg:#d03b3b;--warn:#c98500;}
+  :root[data-theme="dark"]{--plane:#0a0d11;--surface:#151a20;--surface-2:#1b2128;--ink:#eef2f6;--ink-2:#b6bec9;--muted:#7d8794;--line:#242b33;--line-2:#323a44;--accent:#3987e5;--pos:#22b722;--neg:#e05656;--warn:#d99400;}
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--plane); color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  .mono { font-family:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }
+  .wrap { max-width:1060px; margin:0 auto; padding:40px 24px 72px; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  h1 { font-size:clamp(26px,4vw,38px); line-height:1.1; margin:.35em 0 .2em; letter-spacing:-.02em; text-wrap:balance; }
+  .sub { color:var(--ink-2); max-width:62ch; font-size:15.5px; }
+  .verdict { display:inline-flex; align-items:center; gap:8px; margin-top:18px; padding:7px 14px 7px 12px;
+    background:color-mix(in srgb,var(--pos) 12%,var(--surface)); border:1px solid color-mix(in srgb,var(--pos) 34%,transparent);
+    border-radius:999px; font-size:13.5px; font-weight:600; }
+  .verdict .dot { width:8px; height:8px; border-radius:50%; background:var(--pos); box-shadow:0 0 0 3px color-mix(in srgb,var(--pos) 22%,transparent); }
+  .config { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+  .chip { font-size:12.5px; padding:5px 11px; border-radius:7px; background:var(--surface); border:1px solid var(--line); color:var(--ink-2); box-shadow:var(--shadow); }
+  .chip b { color:var(--ink); font-weight:600; }
+  section { margin-top:40px; }
+  .sec-h { display:flex; align-items:baseline; gap:12px; margin-bottom:14px; }
+  .sec-h h2 { font-size:18px; margin:0; letter-spacing:-.01em; }
+  .sec-h .n { color:var(--muted); font-size:13px; font-weight:600; }
+  .note { font-size:13px; color:var(--muted); margin-top:10px; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  @media (max-width:720px){ .kpis{ grid-template-columns:repeat(2,1fr);} }
+  .kpi { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px; box-shadow:var(--shadow); }
+  .kpi .lab { font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  .kpi .val { font-size:29px; font-weight:600; margin-top:7px; letter-spacing:-.02em; }
+  .kpi .val small { font-size:15px; color:var(--muted); font-weight:500; }
+  .kpi .cap { font-size:12px; color:var(--ink-2); margin-top:3px; }
+  .pos{ color:var(--pos);} .neg{ color:var(--neg);}
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px; box-shadow:var(--shadow); }
+  .chart-box { position:relative; width:100%; }
+  svg.chart { width:100%; height:auto; display:block; overflow:visible; }
+  .grid line { stroke:var(--line); stroke-width:1; }
+  .axis text { fill:var(--muted); font-size:11px; }
+  .baseline { stroke:var(--line-2); stroke-width:1; stroke-dasharray:3 3; }
+  .crosshair{ stroke:var(--line-2); stroke-width:1; }
+  .tooltip { position:absolute; pointer-events:none; opacity:0; transition:opacity .12s; z-index:5;
+    background:var(--surface); border:1px solid var(--line-2); border-radius:9px; padding:9px 11px; box-shadow:var(--shadow); font-size:12.5px; }
+  .tt-d { font-weight:600; margin-bottom:4px; font-size:11.5px; color:var(--muted); }
+  .tbl-scroll { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th,td { padding:10px 12px; text-align:right; white-space:nowrap; }
+  th { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:600; border-bottom:1px solid var(--line-2); }
+  td { border-bottom:1px solid var(--line); }
+  tr:last-child td { border-bottom:none; }
+  td.l, th.l { text-align:left; }
+  tr.win-row td { background:color-mix(in srgb,var(--pos) 9%,transparent); }
+  tr.worst-row td { background:color-mix(in srgb,var(--neg) 8%,transparent); }
+  .tag { font-size:10.5px; font-weight:700; padding:2px 7px; border-radius:5px; letter-spacing:.03em; }
+  .tag.win{ background:color-mix(in srgb,var(--pos) 18%,transparent); color:var(--pos); }
+  .tag.bad{ background:color-mix(in srgb,var(--neg) 16%,transparent); color:var(--neg); }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:760px){ .two{ grid-template-columns:1fr; } }
+  .pnl-row { display:grid; grid-template-columns:52px 1fr 60px; align-items:center; gap:8px; padding:3px 0; font-size:13px; }
+  .pnl-row .tk { font-weight:600; }
+  .pnl-track { position:relative; height:14px; }
+  .pnl-mid { position:absolute; left:50%; top:0; bottom:0; width:1px; background:var(--line-2); }
+  .pnl-bar { position:absolute; top:2px; height:10px; border-radius:3px; }
+  .pnl-v { text-align:right; }
+  .caveat { display:flex; gap:11px; padding:11px 0; border-bottom:1px solid var(--line); font-size:14px; color:var(--ink-2); }
+  .caveat:last-child{ border-bottom:none; }
+  .caveat .ic { color:var(--warn); font-weight:700; flex:none; }
+  .caveat b { color:var(--ink); }
+  .road { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  @media (max-width:720px){ .road{ grid-template-columns:1fr 1fr; } }
+  .ph { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px; box-shadow:var(--shadow); }
+  .ph .st { font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+  .ph.done .st{ color:var(--pos); } .ph.now .st{ color:var(--accent); } .ph.todo .st{ color:var(--muted); }
+  .ph h4 { margin:6px 0 3px; font-size:14.5px; } .ph p { margin:0; font-size:12.5px; color:var(--ink-2); }
+  .ph.now { border-color:color-mix(in srgb,var(--accent) 45%,transparent); }
+  footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Üretim Sistemi · 50 Coin Portföy · 3 Tem 2026</div>
+    <h1>SE NFT + Band <span class="mono" style="color:var(--accent)">V10</span> — 50 Coin</h1>
+    <p class="sub">TradingView ayarların (band 15m · ETH yön · güç filtresi) + veriyle optimize edilmiş SL/TP ve risk yönetimi. 50 kripto altcoin, tek hesap, zaman-sıralı, paylaşımlı risk — paper trading botuyla birebir aynı mantık.</p>
+    <div class="verdict"><span class="dot"></span>50 coin'in 29'u kârlı · risk-ayarlı gerçek edge, kill-switch içinde</div>
+    <div class="config">
+      <span class="chip"><b>Band:</b> 15m</span>
+      <span class="chip"><b>Giriş:</b> Sinyal→Temas</span>
+      <span class="chip"><b>SL/TP:</b> %2 / %3 <span style="color:var(--pos)">◆ optimize</span></span>
+      <span class="chip"><b>NFT yön:</b> ETH 3m</span>
+      <span class="chip"><b>Risk:</b> %0.75/işlem</span>
+      <span class="chip"><b>Max poz:</b> 5</span>
+    </div>
+  </header>
+
+  <section><div class="kpis" id="kpis"></div>
+    <p class="note">60 günlük portföy backtest'i, $1000 başlangıç. Metrikler paper botun kullanacağı final config ile.</p>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="n mono">01</span><h2>Portföy özkaynak eğrisi</h2></div>
+    <div class="card"><div class="chart-box">
+      <svg class="chart" id="chart" viewBox="0 0 900 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="50 coin portföy özkaynak eğrisi"></svg>
+      <div class="tooltip mono" id="tip"></div>
+    </div></div>
+    <p class="note">Tek $1000'lık hesap, aynı anda en fazla 5 pozisyon. Basamaklar işlem kapanışları. Max drawdown −14.2% — kill-switch limiti (−15%) içinde.</p>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="n mono">02</span><h2>SL/TP optimizasyonu — neden %2/3?</h2></div>
+    <div class="card tbl-scroll">
+      <table><thead><tr>
+        <th class="l">SL / TP şeması</th><th>Kârlı coin</th><th>Med. Winrate</th><th>Med. PF</th><th>Med. Getiri</th><th class="l"></th>
+      </tr></thead><tbody id="sltp"></tbody></table>
+    </div>
+    <p class="note">Senin <b>1:1 (%1/1)</b> ayarın en kötüsü: winrate en yüksek (%52) ama 50 coin'in yalnızca %26'sı kârlı — komisyon dar kazançları yiyor. <b>%2/3</b> kazandı: coin'lerin %70'i kârlı, OOS test'te PF 1.38.</p>
+  </section>
+
+  <div class="two">
+    <section style="margin-top:40px">
+      <div class="sec-h"><span class="n mono">03</span><h2>Risk / eşzamanlı denge</h2></div>
+      <div class="card tbl-scroll">
+        <table><thead><tr><th class="l">Ayar</th><th>Getiri</th><th>Max DD</th><th>Get/DD</th></tr></thead><tbody id="risk"></tbody></table>
+        <p class="note" style="margin-top:12px">50 coin korelasyonlu — 10 pozisyon/%1 risk −31.6% DD veriyordu. %0.75 + max 5 seçildi: getirinin 2/3'ü, DD yarıdan az.</p>
+      </div>
+    </section>
+    <section style="margin-top:40px">
+      <div class="sec-h"><span class="n mono">04</span><h2>Coin bazında kâr/zarar</h2></div>
+      <div class="card">
+        <div id="pnl"></div>
+        <p class="note" id="pnlnote" style="margin-top:12px"></p>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="sec-h"><span class="n mono">05</span><h2>Dürüst uyarılar</h2></div>
+    <div class="card">
+      <div class="caveat"><span class="ic">!</span><div><b>Mütevazı edge.</b> +24% / 60 gün iyi ama money-printer değil; med. PF ~1.14. Kârın çoğu birkaç güçlü coin'den (SUI, SOL, TIA).</div></div>
+      <div class="caveat"><span class="ic">!</span><div><b>Korelasyon riski gerçek.</b> Piyasa düşünce pozisyonlar birlikte stop olur; max 5 poz + kill-switch bunu sınırlar ama sıfırlamaz.</div></div>
+      <div class="caveat"><span class="ic">!</span><div><b>Tek rejim (Mar–Tem 2026).</b> Farklı piyasada davranış değişebilir. Paper trading tam da bunu ileriye dönük test eder.</div></div>
+      <div class="caveat"><span class="ic">!</span><div><b>Canlı ≠ backtest.</b> Bot mum kapanışında girer (backtest sonraki açılışta) — gerçek sonuç biraz farklı olabilir.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="n mono">06</span><h2>Yol haritası</h2></div>
+    <div class="road">
+      <div class="ph done"><div class="st">✓ Tamam</div><h4>Faz 0–1</h4><p>Backtest + 50 coin SL/TP & risk optimizasyonu.</p></div>
+      <div class="ph now"><div class="st">▶ Şimdi</div><h4>Faz 2 · Paper</h4><p>50 coin canlı simülasyon, sahte para, sıfır risk.</p></div>
+      <div class="ph todo"><div class="st">Bekliyor</div><h4>Faz 3 · Testnet</h4><p>Binance testnet, gerçek emir akışı.</p></div>
+      <div class="ph todo"><div class="st">Bekliyor</div><h4>Faz 4 · Canlı</h4><p>Kanıtlanınca gerçek sermaye.</p></div>
+    </div>
+  </section>
+
+  <footer>Binance Futures (USDT-M) · ccxt · komisyon %0.05/yön + slippage · SL gerçek stop, TP limit gibi modellendi · %0.75 risk/işlem, max 5 eşzamanlı · kill-switch günlük −%3 / toplam −%15. Geçmiş performans geleceği garanti etmez.</footer>
+</div>
+
+<script>
+const D = {"equity":[1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,998.61,984.05,984.05,989.8,986.87,937.09,937.09,936.93,935.36,934.43,939.88,937.42,953.39,958.23,949.68,962.73,959.41,941.18,954.95,947.27,978.59,979.56,979.12,1011.53,967.49,974.99,989.59,991.52,992.02,1002.22,994.44,990.68,989.64,984.83,989.99,998.3,988.74,990.77,985.29,984.64,991.88,995.42,989.02,975.65,965.72,941.3,936.69,946.07,936.19,909.22,911.06,906.02,899.51,909.59,907.91,893.12,892.08,882.79,907.16,903.99,912.14,925.55,935.16,924.83,924.83,934.64,927.18,927.18,927.18,927.18,927.18,945.07,937.81,914.99,927.46,913.6,925.62,907.22,912.21,926.16,918.57,897.57,904.26,931.87,928.04,923.16,964.66,978.27,1003.48,995.47,995.47,987.52,987.52,988.78,991.69,990.73,995.56,993.17,1002.07,1005.46,1008.47,1008.47,1004.09,1002.95,1002.95,1002.95,1034.88,1034.96,1031.95,1026.61,1039.34,1092.35,1092.35,1092.35,1092.35,1092.35,1037.55,1048.45,1046.19,1035.55,1030.76,1025.64,1022.97,1026.36,1023.04,1014.87,1014.87,1014.87,1015.77,1043.39,1040.9,1049.25,1048.32,1047.17,1040.84,1043.49,1037.31,1033.88,1040.8,1046.25,1054.79,1058.28,1041.74,1043.76,1053.22,1064.16,1017.95,995.46,1011.56,1002.12,1018.2,1020.79,1024.52,1022.63,1007.54,1009.17,1014.07,1041.41,1066.39,1072.77,1068.7,1083.73,1059.47,1089.14,1094.21,1082.55,1093.77,1110.53,1097.48,1103.65,1088.14,1095.3,1099.12,1116.17,1100.78,1081.9,1103.0,1126.5,1154.57,1154.57,1183.09,1137.92,1128.62,1144.23,1184.03,1176.06,1165.12,1150.07,1199.23,1199.23,1205.91,1221.58,1256.82,1246.64,1246.64,1246.64,1246.64,1246.64,1231.2,1222.17,1209.5,1199.74,1199.44,1182.56,1163.35,1170.23,1157.59,1165.5,1167.67,1180.71,1200.52,1211.73,1230.8,1234.62,1238.03,1199.12,1176.17,1209.64,1216.57,1225.13,1225.37,1244.58],"dates":["04 May 08:18","04 May 13:48","04 May 19:18","05 May 00:48","05 May 06:18","05 May 11:48","05 May 17:18","05 May 22:48","06 May 04:18","06 May 09:48","06 May 15:18","06 May 20:48","07 May 02:18","07 May 07:48","07 May 13:18","07 May 18:48","08 May 00:18","08 May 05:48","08 May 11:18","08 May 16:48","08 May 22:18","09 May 03:48","09 May 09:18","09 May 14:48","09 May 20:18","10 May 01:48","10 May 07:18","10 May 12:48","10 May 18:18","10 May 23:48","11 May 05:18","11 May 10:48","11 May 16:18","11 May 21:48","12 May 03:18","12 May 08:48","12 May 14:18","12 May 19:48","13 May 01:18","13 May 06:48","13 May 12:18","13 May 17:48","13 May 23:18","14 May 04:48","14 May 10:18","14 May 15:48","14 May 21:18","15 May 02:48","15 May 08:18","15 May 13:48","15 May 19:18","16 May 00:48","16 May 06:18","16 May 11:48","16 May 17:18","16 May 22:48","17 May 04:18","17 May 09:48","17 May 15:18","17 May 20:48","18 May 02:18","18 May 07:48","18 May 13:18","18 May 18:48","19 May 00:18","19 May 05:48","19 May 11:18","19 May 16:48","19 May 22:18","20 May 03:48","20 May 09:18","20 May 14:48","20 May 20:18","21 May 01:48","21 May 07:18","21 May 12:48","21 May 18:18","21 May 23:48","22 May 05:18","22 May 10:48","22 May 16:18","22 May 21:48","23 May 03:18","23 May 08:48","23 May 14:18","23 May 19:48","24 May 01:18","24 May 06:48","24 May 12:18","24 May 17:48","24 May 23:18","25 May 04:48","25 May 10:18","25 May 15:48","25 May 21:18","26 May 02:48","26 May 08:18","26 May 13:48","26 May 19:18","27 May 00:48","27 May 06:18","27 May 11:48","27 May 17:18","27 May 22:48","28 May 04:18","28 May 09:48","28 May 15:18","28 May 20:48","29 May 02:18","29 May 07:48","29 May 13:18","29 May 18:48","30 May 00:18","30 May 05:48","30 May 11:18","30 May 16:48","30 May 22:18","31 May 03:48","31 May 09:18","31 May 14:48","31 May 20:18","01 Jun 01:48","01 Jun 07:18","01 Jun 12:48","01 Jun 18:18","01 Jun 23:48","02 Jun 05:18","02 Jun 10:48","02 Jun 16:18","02 Jun 21:48","03 Jun 03:18","03 Jun 08:48","03 Jun 14:18","03 Jun 19:48","04 Jun 01:18","04 Jun 06:48","04 Jun 12:18","04 Jun 17:48","04 Jun 23:18","05 Jun 04:48","05 Jun 10:18","05 Jun 15:48","05 Jun 21:18","06 Jun 02:48","06 Jun 08:18","06 Jun 13:48","06 Jun 19:18","07 Jun 00:48","07 Jun 06:18","07 Jun 11:48","07 Jun 17:18","07 Jun 22:48","08 Jun 04:18","08 Jun 09:48","08 Jun 15:18","08 Jun 20:48","09 Jun 02:18","09 Jun 07:48","09 Jun 13:18","09 Jun 18:48","10 Jun 00:18","10 Jun 05:48","10 Jun 11:18","10 Jun 16:48","10 Jun 22:18","11 Jun 03:48","11 Jun 09:18","11 Jun 14:48","11 Jun 20:18","12 Jun 01:48","12 Jun 07:18","12 Jun 12:48","12 Jun 18:18","12 Jun 23:48","13 Jun 05:18","13 Jun 10:48","13 Jun 16:18","13 Jun 21:48","14 Jun 03:18","14 Jun 08:48","14 Jun 14:18","14 Jun 19:48","15 Jun 01:18","15 Jun 06:48","15 Jun 12:18","15 Jun 17:48","15 Jun 23:18","16 Jun 04:48","16 Jun 10:18","16 Jun 15:48","16 Jun 21:18","17 Jun 02:48","17 Jun 08:18","17 Jun 13:48","17 Jun 19:18","18 Jun 00:48","18 Jun 06:18","18 Jun 11:48","18 Jun 17:18","18 Jun 22:48","19 Jun 04:18","19 Jun 09:48","19 Jun 15:18","19 Jun 20:48","20 Jun 02:18","20 Jun 07:48","20 Jun 13:18","20 Jun 18:48","21 Jun 00:18","21 Jun 05:48","21 Jun 11:18","21 Jun 16:48","21 Jun 22:18","22 Jun 03:48","22 Jun 09:18","22 Jun 14:48","22 Jun 20:18","23 Jun 01:48","23 Jun 07:18","23 Jun 12:48","23 Jun 18:18","23 Jun 23:48","24 Jun 05:18","24 Jun 10:48","24 Jun 16:18","24 Jun 21:48","25 Jun 03:18","25 Jun 08:48","25 Jun 14:18","25 Jun 19:48","26 Jun 01:18","26 Jun 06:48","26 Jun 12:18","26 Jun 17:48","26 Jun 23:18","27 Jun 04:48","27 Jun 10:18","27 Jun 15:48","27 Jun 21:18","28 Jun 02:48","28 Jun 08:18","28 Jun 13:48","28 Jun 19:18","29 Jun 00:48","29 Jun 06:18","29 Jun 11:48","29 Jun 17:18","29 Jun 22:48","30 Jun 04:18","30 Jun 09:48","30 Jun 15:18","30 Jun 20:48","01 Jul 02:18","01 Jul 07:48","01 Jul 13:18","01 Jul 18:48","02 Jul 00:18","02 Jul 05:48","02 Jul 11:18","02 Jul 16:48","02 Jul 22:18","03 Jul 03:48"],"summary":{"start":1000,"final":1239.07,"ret":23.91,"trades":287,"win":47.4,"maxdd":-14.21,"skips":346,"coins":50},"coin_pnl":[{"c":"SUI","pnl":66.8},{"c":"TIA","pnl":51.2},{"c":"ALGO","pnl":35.7},{"c":"LTC","pnl":34.1},{"c":"CHZ","pnl":33.0},{"c":"ADA","pnl":32.9},{"c":"S","pnl":30.0},{"c":"WIF","pnl":28.8},{"c":"SOL","pnl":27.9},{"c":"ETH","pnl":26.4},{"c":"MANA","pnl":25.8},{"c":"UNI","pnl":23.7},{"c":"DOGE","pnl":22.5},{"c":"1000SHIB","pnl":20.9},{"c":"DYDX","pnl":20.0},{"c":"WLD","pnl":19.5},{"c":"TRX","pnl":15.0},{"c":"CRV","pnl":13.5},{"c":"ONDO","pnl":13.4},{"c":"ZEC","pnl":11.9},{"c":"LDO","pnl":11.0},{"c":"FET","pnl":9.8},{"c":"ICP","pnl":9.6},{"c":"AAVE","pnl":8.3},{"c":"1000PEPE","pnl":7.6},{"c":"PYTH","pnl":7.1},{"c":"1000BONK","pnl":3.7},{"c":"FIL","pnl":3.2},{"c":"APT","pnl":2.1},{"c":"RENDER","pnl":-2.0},{"c":"BTC","pnl":-5.5},{"c":"ARB","pnl":-6.0},{"c":"LINK","pnl":-7.0},{"c":"AVAX","pnl":-7.5},{"c":"ENA","pnl":-7.7},{"c":"SEI","pnl":-12.2},{"c":"ORDI","pnl":-12.3},{"c":"DOT","pnl":-12.3},{"c":"NEAR","pnl":-13.4},{"c":"INJ","pnl":-13.6},{"c":"BNB","pnl":-17.7},{"c":"ATOM","pnl":-18.9},{"c":"HYPE","pnl":-20.8},{"c":"XLM","pnl":-21.0},{"c":"TAIKO","pnl":-21.3},{"c":"HBAR","pnl":-25.2},{"c":"XRP","pnl":-31.6},{"c":"OP","pnl":-33.7},{"c":"JUP","pnl":-43.0},{"c":"ETC","pnl":-43.6}]};
+const SLTP = [
+  {s:"%1/1 (1:1)", prof:26, win:52.2, pf:0.81, ret:-1.81, tag:"bad", label:"senin ayarın"},
+  {s:"%1/1.5", prof:52, win:46.1, pf:1.00, ret:0.03},
+  {s:"%1.5/2.0", prof:60, win:50.0, pf:1.18, ret:1.74},
+  {s:"%2/3", prof:70, win:46.7, pf:1.14, ret:1.25, tag:"win", label:"kazanan"},
+  {s:"%2/4 (1:2)", prof:66, win:40.0, pf:1.17, ret:1.71},
+];
+const RISK = [
+  {a:"%1.0 · max 10", ret:36.3, dd:-31.6, r:1.15},
+  {a:"%1.0 · max 5", ret:31.8, dd:-18.6, r:1.71},
+  {a:"%0.75 · max 5", ret:23.9, dd:-14.2, r:1.68, hl:true},
+  {a:"%0.5 · max 4", ret:11.4, dd:-7.7, r:1.48},
+];
+
+/* KPIs */
+const s=D.summary;
+document.getElementById('kpis').innerHTML=[
+  {l:"Portföy getirisi", v:(s.ret>=0?'+':'')+s.ret+'<small>%</small>', c:"60 günde, $1000→$"+s.final, cls:s.ret>=0?'pos':'neg'},
+  {l:"Kârlı coin", v:'29<small>/50</small>', c:"coin'lerin %58'i", cls:''},
+  {l:"Max drawdown", v:s.maxdd+'<small>%</small>', c:"kill-switch (−15%) içinde", cls:'neg'},
+  {l:"İşlem · Winrate", v:s.trades+'<small> · '+s.win+'%</small>', c:s.skips+" sinyal kontenjandan atlandı", cls:''},
+].map(k=>`<div class="kpi"><div class="lab">${k.l}</div><div class="val mono ${k.cls}">${k.v}</div><div class="cap">${k.c}</div></div>`).join('');
+
+/* SL/TP table */
+document.getElementById('sltp').innerHTML=SLTP.map(r=>`
+  <tr class="${r.tag==='win'?'win-row':r.tag==='bad'?'worst-row':''}">
+    <td class="l"><b>${r.s}</b> ${r.tag?`<span class="tag ${r.tag}">${r.label}</span>`:''}</td>
+    <td class="mono ${r.prof>=50?'pos':'neg'}">${r.prof}%</td>
+    <td class="mono">${r.win}%</td>
+    <td class="mono ${r.pf>=1?'pos':'neg'}">${r.pf}</td>
+    <td class="mono ${r.ret>=0?'pos':'neg'}">${r.ret>=0?'+':''}${r.ret}%</td><td></td>
+  </tr>`).join('');
+
+/* risk table */
+document.getElementById('risk').innerHTML=RISK.map(r=>`
+  <tr class="${r.hl?'win-row':''}">
+    <td class="l"><b>${r.a}</b>${r.hl?' <span class="tag win">seçilen</span>':''}</td>
+    <td class="mono pos">+${r.ret}%</td>
+    <td class="mono neg">${r.dd}%</td>
+    <td class="mono">${r.r}</td>
+  </tr>`).join('');
+
+/* coin pnl diverging bars (top 8 + bottom 8) */
+(function(){
+  const arr=D.coin_pnl; const mx=Math.max(...arr.map(x=>Math.abs(x.pnl)));
+  const show=[...arr.slice(0,8), ...arr.slice(-8)];
+  document.getElementById('pnl').innerHTML=show.map(x=>{
+    const pos=x.pnl>=0, w=Math.abs(x.pnl)/mx*48;
+    const bar=pos?`left:50%;width:${w}%;background:var(--pos)`:`right:50%;width:${w}%;background:var(--neg)`;
+    return `<div class="pnl-row"><span class="tk mono">${x.c}</span>
+      <div class="pnl-track"><span class="pnl-mid"></span><span class="pnl-bar" style="${bar}"></span></div>
+      <span class="pnl-v mono ${pos?'pos':'neg'}">${pos?'+':''}$${x.pnl}</span></div>`;
+  }).join('');
+  const nprof=arr.filter(x=>x.pnl>0).length;
+  document.getElementById('pnlnote').textContent=`En iyi 8 ve en kötü 8 gösteriliyor. Toplam ${nprof} coin kârlı, ${arr.length-nprof} zararda. Kâr dağınık değil — birkaç güçlü coin taşıyor.`;
+})();
+
+/* equity area chart */
+(function(){
+  const svg=document.getElementById('chart'), NS="http://www.w3.org/2000/svg";
+  const W=900,H=340,m={t:14,r:64,b:26,l:52};
+  const iw=W-m.l-m.r, ih=H-m.t-m.b;
+  const E=D.equity, DT=D.dates, n=E.length;
+  let lo=Math.min(...E), hi=Math.max(...E);
+  lo=Math.floor(lo/20)*20; hi=Math.ceil(hi/20)*20;
+  const x=i=>m.l+i/(n-1)*iw, y=v=>m.t+(1-(v-lo)/(hi-lo))*ih;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+  const g=mk('g',{class:'grid'});svg.appendChild(g);const ax=mk('g',{class:'axis'});svg.appendChild(ax);
+  for(let i=0;i<=5;i++){const v=lo+(hi-lo)*i/5,yy=y(v);g.appendChild(mk('line',{x1:m.l,y1:yy,x2:m.l+iw,y2:yy}));
+    const t=mk('text',{x:m.l-8,y:yy+3,'text-anchor':'end'});t.textContent='$'+v;t.classList.add('mono');ax.appendChild(t);}
+  svg.appendChild(mk('line',{class:'baseline',x1:m.l,y1:y(1000),x2:m.l+iw,y2:y(1000)}));
+  for(let i=0;i<6;i++){const idx=Math.round(i/5*(n-1));const t=mk('text',{x:x(idx),y:H-8,'text-anchor':'middle'});t.textContent=DT[idx].split(' ')[0]+' '+DT[idx].split(' ')[1];ax.appendChild(t);}
+  // area
+  const grad=mk('linearGradient',{id:'ag',x1:0,y1:0,x2:0,y2:1});
+  grad.appendChild(mk('stop',{offset:'0%','stop-color':'var(--accent)','stop-opacity':.28}));
+  grad.appendChild(mk('stop',{offset:'100%','stop-color':'var(--accent)','stop-opacity':0}));
+  const defs=mk('defs',{});defs.appendChild(grad);svg.appendChild(defs);
+  const line=E.map((v,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)).join(' ');
+  svg.appendChild(mk('path',{d:line+` L${x(n-1)} ${y(lo)} L${x(0)} ${y(lo)} Z`,fill:'url(#ag)',stroke:'none'}));
+  svg.appendChild(mk('path',{d:line,fill:'none',stroke:'var(--accent)','stroke-width':2}));
+  svg.appendChild(mk('circle',{cx:x(n-1),cy:y(E[n-1]),r:3.5,fill:'var(--accent)'}));
+  const el=mk('text',{x:x(n-1)+8,y:y(E[n-1])+4,'text-anchor':'start'});el.textContent='$'+E[n-1].toFixed(0);el.classList.add('mono');el.setAttribute('style','fill:var(--accent);font-size:12px;font-weight:700');svg.appendChild(el);
+  // hover
+  const cr=mk('line',{class:'crosshair',y1:m.t,y2:m.t+ih});cr.style.opacity=0;svg.appendChild(cr);
+  const dot=mk('circle',{r:4,fill:'var(--accent)',stroke:'var(--surface)','stroke-width':1.5});dot.style.opacity=0;svg.appendChild(dot);
+  const tip=document.getElementById('tip');
+  const ov=mk('rect',{x:m.l,y:m.t,width:iw,height:ih,fill:'transparent'});svg.appendChild(ov);
+  ov.addEventListener('mousemove',ev=>{const r=svg.getBoundingClientRect();let idx=Math.round(((ev.clientX-r.left)/r.width*W-m.l)/iw*(n-1));idx=Math.max(0,Math.min(n-1,idx));
+    const xx=x(idx),yy=y(E[idx]);cr.setAttribute('x1',xx);cr.setAttribute('x2',xx);cr.style.opacity=1;dot.setAttribute('cx',xx);dot.setAttribute('cy',yy);dot.style.opacity=1;
+    const rr=(E[idx]/1000-1)*100;tip.innerHTML=`<div class="tt-d">${DT[idx]}</div>$${E[idx].toFixed(2)} <span class="${rr>=0?'pos':'neg'}">(${rr>=0?'+':''}${rr.toFixed(1)}%)</span>`;
+    tip.style.opacity=1;const bx=svg.getBoundingClientRect();let lft=(xx/W)*bx.width+10;if(lft>bx.width-130)lft=(xx/W)*bx.width-130;tip.style.left=Math.max(0,lft)+'px';tip.style.top='6px';});
+  ov.addEventListener('mouseleave',()=>{cr.style.opacity=0;dot.style.opacity=0;tip.style.opacity=0;});
+})();
+</script>

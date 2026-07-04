@@ -1,0 +1,50 @@
+name: paper-bot
+
+# Her ~5 dakikada bir calisir (GitHub cron min. 5dk; gecikebilir ama bot
+# son islenen mumdan sonrakileri TOPLU isler, sorun olmaz). Ayrica Actions
+# sekmesinden "Run workflow" ile elle tetiklenebilir.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
+
+# Ayni anda iki tik calismasin (state cakismasi olmasin)
+concurrency:
+  group: paperbot
+  cancel-in-progress: false
+
+# GITHUB_TOKEN'a repo'ya yazma izni (state commit'i icin)
+permissions:
+  contents: write
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repo'yu al
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Bagimliliklar
+        run: pip install -r requirements.txt
+
+      - name: Bir tik calistir (--once)
+        run: python paper_bot.py --once
+
+      - name: State'i commit'le
+        run: |
+          git config user.name "paper-bot"
+          git config user.email "paper-bot@users.noreply.github.com"
+          git add -f results/paper_state.json results/paper_log.txt
+          if git diff --cached --quiet; then
+            echo "Degisiklik yok."
+          else
+            git commit -m "paper tick $(date -u +%Y-%m-%dT%H:%M) [skip ci]"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
