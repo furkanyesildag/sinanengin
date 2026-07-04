@@ -1,0 +1,53 @@
+[2026-07-04 08:58:37Z] BTC/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:39Z] ETH/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:40Z] SOL/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:41Z] HYPE/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:43Z] ZEC/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:44Z] XRP/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:46Z] WLD/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:46Z] ATLA TAIKO/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (TAIKO/USDT): bybit GET https://api.bybit.com/v5/market/instruments-in
+[2026-07-04 08:58:47Z] DOGE/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:49Z] BNB/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:50Z] ADA/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:51Z] UNI/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:51Z] ATLA 1000PEPE/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000PEPE/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-04 08:58:53Z] NEAR/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:54Z] SUI/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:56Z] LINK/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:57Z] XLM/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:58:58Z] ENA/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:00Z] AAVE/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:01Z] AVAX/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:03Z] LTC/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:04Z] DOT/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:05Z] ONDO/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:07Z] FIL/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:08Z] TRX/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:09Z] DYDX/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:09Z] ATLA FET/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (FET/USDT): bybit GET https://api.bybit.com/v5/market/instruments-info
+[2026-07-04 08:59:11Z] HBAR/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:12Z] INJ/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:12Z] ATLA 1000SHIB/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000SHIB/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-04 08:59:14Z] WIF/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:15Z] JUP/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:17Z] ARB/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:18Z] TIA/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:19Z] APT/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:21Z] OP/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:22Z] ICP/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:24Z] RENDER/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:24Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-04 08:59:25Z] MANA/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:26Z] ALGO/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:28Z] SEI/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:29Z] LDO/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:31Z] ORDI/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:32Z] CRV/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:34Z] S/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:35Z] ETC/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:36Z] ATOM/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:38Z] PYTH/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:39Z] CHZ/USDT: warmup tamam (1399 mum), son=2026-07-04 08:54:00
+[2026-07-04 08:59:39Z]   (5/50 sembol bu tikte atlandi)
+[2026-07-04 08:59:39Z] Yeni gun 2026-07-04: gun basi equity=1000.00
+[2026-07-04 08:59:39Z] TIK: equity=1000.0 mtm=1000.0 acik=0 islem=0 halted=False
