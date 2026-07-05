@@ -168,3 +168,13 @@
 [2026-07-05 05:29:37Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
 [2026-07-05 05:29:52Z]   (5/50 sembol bu tikte atlandi)
 [2026-07-05 05:29:52Z] TIK: equity=1042.73 mtm=1021.21 acik=4 islem=4 halted=False
+[2026-07-05 08:28:45Z] Durum yuklendi: equity=1042.73 halted=False
+[2026-07-05 08:28:57Z] ATLA TAIKO/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (TAIKO/USDT): bybit GET https://api.bybit.com/v5/market/instruments-in
+[2026-07-05 08:29:01Z] ATLA 1000PEPE/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000PEPE/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-05 08:29:18Z] ATLA FET/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (FET/USDT): bybit GET https://api.bybit.com/v5/market/instruments-info
+[2026-07-05 08:29:21Z] ATLA 1000SHIB/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000SHIB/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-05 08:29:22Z] CIKIS WIF/USDT SL @ 0.171742 pnl=-8.23 eq=1034.5
+[2026-07-05 08:29:31Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-05 08:29:41Z] CIKIS ETC/USDT SL @ 7.09895 pnl=-8.23 eq=1026.27
+[2026-07-05 08:29:45Z]   (5/50 sembol bu tikte atlandi)
+[2026-07-05 08:29:45Z] TIK: equity=1026.27 mtm=1017.09 acik=2 islem=6 halted=False
