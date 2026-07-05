@@ -150,3 +150,13 @@
 [2026-07-04 23:27:22Z] GIRIS ETC/USDT LONG @ 7.2482 SL=7.1011 TP=7.4634 not=381.3
 [2026-07-04 23:27:26Z]   (5/50 sembol bu tikte atlandi)
 [2026-07-04 23:27:26Z] TIK: equity=1031.79 mtm=1038.85 acik=5 islem=3 halted=False
+[2026-07-05 01:18:49Z] Durum yuklendi: equity=1031.79 halted=False
+[2026-07-05 01:19:01Z] ATLA TAIKO/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (TAIKO/USDT): bybit GET https://api.bybit.com/v5/market/instruments-in
+[2026-07-05 01:19:07Z] ATLA 1000PEPE/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000PEPE/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-05 01:19:23Z] ATLA FET/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (FET/USDT): bybit GET https://api.bybit.com/v5/market/instruments-info
+[2026-07-05 01:19:26Z] ATLA 1000SHIB/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000SHIB/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-05 01:19:37Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-05 01:19:38Z] CIKIS MANA/USDT TP @ 0.072234 pnl=+10.93 eq=1042.73
+[2026-07-05 01:19:52Z]   (5/50 sembol bu tikte atlandi)
+[2026-07-05 01:19:52Z] Yeni gun 2026-07-05: gun basi equity=1036.53
+[2026-07-05 01:19:52Z] TIK: equity=1042.73 mtm=1036.53 acik=4 islem=4 halted=False
