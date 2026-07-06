@@ -286,3 +286,17 @@
 [2026-07-06 06:46:01Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
 [2026-07-06 06:46:14Z]   (5/50 sembol bu tikte atlandi)
 [2026-07-06 06:46:14Z] TIK: equity=1010.32 mtm=1009.78 acik=1 islem=8 halted=False
+[2026-07-06 11:18:18Z] Durum yuklendi: equity=1010.32 halted=False
+[2026-07-06 11:18:26Z] ATLA TAIKO/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (TAIKO/USDT): bybit GET https://api.bybit.com/v5/market/instruments-in
+[2026-07-06 11:18:30Z] ATLA 1000PEPE/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000PEPE/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-06 11:18:31Z] GIRIS NEAR/USDT SHORT @ 2.0244 SL=2.0655 TP=1.9642 not=373.2
+[2026-07-06 11:18:34Z] GIRIS XLM/USDT SHORT @ 0.2048 SL=0.2089 TP=0.1987 not=373.2
+[2026-07-06 11:18:36Z] GIRIS AAVE/USDT SHORT @ 90.8727 SL=92.7180 TP=88.1730 not=373.2
+[2026-07-06 11:18:36Z] CIKIS AAVE/USDT SL @ 92.745815 pnl=-8.07 eq=1002.26
+[2026-07-06 11:18:39Z] GIRIS ONDO/USDT SHORT @ 0.3318 SL=0.3385 TP=0.3219 not=370.2
+[2026-07-06 11:18:42Z] ATLA FET/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (FET/USDT): bybit GET https://api.bybit.com/v5/market/instruments-info
+[2026-07-06 11:18:44Z] ATLA 1000SHIB/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000SHIB/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-06 11:18:52Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-06 11:18:57Z] GIRIS ORDI/USDT SHORT @ 3.3140 SL=3.3813 TP=3.2155 not=370.2
+[2026-07-06 11:19:03Z]   (5/50 sembol bu tikte atlandi)
+[2026-07-06 11:19:03Z] TIK: equity=1002.26 mtm=1003.55 acik=5 islem=9 halted=False
