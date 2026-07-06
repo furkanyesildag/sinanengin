@@ -332,3 +332,11 @@
 [2026-07-06 19:22:37Z] CIKIS ATOM/USDT TP @ 1.60062 pnl=+10.96 eq=1048.13
 [2026-07-06 19:22:40Z]   (5/50 sembol bu tikte atlandi)
 [2026-07-06 19:22:40Z] TIK: equity=1048.13 mtm=1042.65 acik=1 islem=15 halted=False
+[2026-07-06 21:10:21Z] Durum yuklendi: equity=1048.13 halted=False
+[2026-07-06 21:10:30Z] ATLA TAIKO/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (TAIKO/USDT): bybit GET https://api.bybit.com/v5/market/instruments-in
+[2026-07-06 21:10:34Z] ATLA 1000PEPE/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000PEPE/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-06 21:10:47Z] ATLA FET/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (FET/USDT): bybit GET https://api.bybit.com/v5/market/instruments-info
+[2026-07-06 21:10:49Z] ATLA 1000SHIB/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000SHIB/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-06 21:10:57Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-06 21:11:08Z]   (5/50 sembol bu tikte atlandi)
+[2026-07-06 21:11:08Z] TIK: equity=1048.13 mtm=1045.31 acik=1 islem=15 halted=False
