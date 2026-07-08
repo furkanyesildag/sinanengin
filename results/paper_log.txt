@@ -457,3 +457,12 @@
 [2026-07-08 01:10:21Z]   (5/50 sembol bu tikte atlandi)
 [2026-07-08 01:10:21Z] Yeni gun 2026-07-08: gun basi equity=1020.33
 [2026-07-08 01:10:21Z] TIK: equity=1026.15 mtm=1020.33 acik=2 islem=20 halted=False
+[2026-07-08 04:34:06Z] Durum yuklendi: equity=1026.15 halted=False
+[2026-07-08 04:34:14Z] CIKIS HYPE/USDT SL @ 68.44716 pnl=-8.18 eq=1017.96
+[2026-07-08 04:34:18Z] ATLA TAIKO/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (TAIKO/USDT): bybit GET https://api.bybit.com/v5/market/instruments-in
+[2026-07-08 04:34:22Z] ATLA 1000PEPE/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000PEPE/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-08 04:34:39Z] ATLA FET/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (FET/USDT): bybit GET https://api.bybit.com/v5/market/instruments-info
+[2026-07-08 04:34:42Z] ATLA 1000SHIB/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000SHIB/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-08 04:34:52Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-07-08 04:35:06Z]   (5/50 sembol bu tikte atlandi)
+[2026-07-08 04:35:06Z] TIK: equity=1017.96 mtm=1021.26 acik=1 islem=21 halted=False
