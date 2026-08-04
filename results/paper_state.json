@@ -526,51 +526,51 @@
       }
     ],
     "last_price": {
-      "BTC/USDT": 64183.0,
-      "ETH/USDT": 1873.78,
-      "SOL/USDT": 74.03,
-      "HYPE/USDT": 55.139,
-      "ZEC/USDT": 507.55,
-      "XRP/USDT": 1.0751,
-      "WLD/USDT": 0.3224,
-      "DOGE/USDT": 0.0703,
-      "BNB/USDT": 593.6,
-      "ADA/USDT": 0.193,
-      "UNI/USDT": 3.861,
-      "NEAR/USDT": 1.738,
-      "SUI/USDT": 0.695,
-      "LINK/USDT": 8.164,
-      "XLM/USDT": 0.16979,
-      "ENA/USDT": 0.09206,
-      "AAVE/USDT": 90.41,
-      "AVAX/USDT": 6.706,
-      "LTC/USDT": 44.9,
-      "DOT/USDT": 0.866,
-      "ONDO/USDT": 0.3762,
-      "FIL/USDT": 0.7228,
-      "TRX/USDT": 0.32696,
-      "DYDX/USDT": 0.11357,
-      "HBAR/USDT": 0.06957,
-      "INJ/USDT": 4.944,
-      "WIF/USDT": 0.1408,
-      "JUP/USDT": 0.1901,
-      "ARB/USDT": 0.08226,
-      "TIA/USDT": 0.3391,
-      "APT/USDT": 0.582,
-      "OP/USDT": 0.08909,
-      "ICP/USDT": 2.105,
-      "RENDER/USDT": 1.352,
-      "MANA/USDT": 0.06689,
-      "ALGO/USDT": 0.08971,
-      "SEI/USDT": 0.04154,
-      "LDO/USDT": 0.281,
-      "ORDI/USDT": 3.409,
-      "CRV/USDT": 0.2052,
-      "S/USDT": 0.02245,
-      "ETC/USDT": 6.602,
+      "BTC/USDT": 64183.2,
+      "ETH/USDT": 1870.45,
+      "SOL/USDT": 73.8,
+      "HYPE/USDT": 55.077,
+      "ZEC/USDT": 505.99,
+      "XRP/USDT": 1.074,
+      "WLD/USDT": 0.3202,
+      "DOGE/USDT": 0.07015,
+      "BNB/USDT": 593.0,
+      "ADA/USDT": 0.1924,
+      "UNI/USDT": 3.853,
+      "NEAR/USDT": 1.731,
+      "SUI/USDT": 0.6934,
+      "LINK/USDT": 8.152,
+      "XLM/USDT": 0.16878,
+      "ENA/USDT": 0.09245,
+      "AAVE/USDT": 90.39,
+      "AVAX/USDT": 6.691,
+      "LTC/USDT": 44.87,
+      "DOT/USDT": 0.8589,
+      "ONDO/USDT": 0.3745,
+      "FIL/USDT": 0.7191,
+      "TRX/USDT": 0.327,
+      "DYDX/USDT": 0.11324,
+      "HBAR/USDT": 0.06947,
+      "INJ/USDT": 4.889,
+      "WIF/USDT": 0.1405,
+      "JUP/USDT": 0.1887,
+      "ARB/USDT": 0.08196,
+      "TIA/USDT": 0.3378,
+      "APT/USDT": 0.5783,
+      "OP/USDT": 0.0891,
+      "ICP/USDT": 2.093,
+      "RENDER/USDT": 1.344,
+      "MANA/USDT": 0.06665,
+      "ALGO/USDT": 0.08939,
+      "SEI/USDT": 0.04157,
+      "LDO/USDT": 0.2807,
+      "ORDI/USDT": 3.382,
+      "CRV/USDT": 0.2054,
+      "S/USDT": 0.02231,
+      "ETC/USDT": 6.588,
       "ATOM/USDT": 1.374,
-      "PYTH/USDT": 0.04015,
-      "CHZ/USDT": 0.01289
+      "PYTH/USDT": 0.03987,
+      "CHZ/USDT": 0.01285
     }
   },
   "engines": {
@@ -582,7 +582,7 @@
       "pendingLongBar": 15695,
       "pendingShortBar": 15513,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ETH/USDT": {
       "waitLB": true,
@@ -592,7 +592,7 @@
       "pendingLongBar": 14327,
       "pendingShortBar": 16352,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "SOL/USDT": {
       "waitLB": true,
@@ -602,7 +602,7 @@
       "pendingLongBar": 14462,
       "pendingShortBar": 15164,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "HYPE/USDT": {
       "waitLB": false,
@@ -612,7 +612,7 @@
       "pendingLongBar": 4391,
       "pendingShortBar": 4136,
       "tradeState": 1,
-      "bar": 16555
+      "bar": 16576
     },
     "ZEC/USDT": {
       "waitLB": true,
@@ -622,7 +622,7 @@
       "pendingLongBar": 16072,
       "pendingShortBar": 14955,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "XRP/USDT": {
       "waitLB": true,
@@ -632,7 +632,7 @@
       "pendingLongBar": 12510,
       "pendingShortBar": 15161,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "WLD/USDT": {
       "waitLB": true,
@@ -642,7 +642,7 @@
       "pendingLongBar": 16246,
       "pendingShortBar": 14707,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "TAIKO/USDT": {
       "waitLB": false,
@@ -662,7 +662,7 @@
       "pendingLongBar": 2421,
       "pendingShortBar": -1,
       "tradeState": -1,
-      "bar": 16555
+      "bar": 16576
     },
     "BNB/USDT": {
       "waitLB": true,
@@ -672,7 +672,7 @@
       "pendingLongBar": 15629,
       "pendingShortBar": 15451,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ADA/USDT": {
       "waitLB": true,
@@ -682,7 +682,7 @@
       "pendingLongBar": 15646,
       "pendingShortBar": 12220,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "UNI/USDT": {
       "waitLB": false,
@@ -692,7 +692,7 @@
       "pendingLongBar": 14372,
       "pendingShortBar": 12950,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "1000PEPE/USDT": {
       "waitLB": false,
@@ -712,7 +712,7 @@
       "pendingLongBar": 12511,
       "pendingShortBar": 13894,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "SUI/USDT": {
       "waitLB": true,
@@ -722,7 +722,7 @@
       "pendingLongBar": 16386,
       "pendingShortBar": 13580,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "LINK/USDT": {
       "waitLB": false,
@@ -732,7 +732,7 @@
       "pendingLongBar": 16109,
       "pendingShortBar": 15164,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "XLM/USDT": {
       "waitLB": false,
@@ -742,7 +742,7 @@
       "pendingLongBar": 14783,
       "pendingShortBar": 15169,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ENA/USDT": {
       "waitLB": true,
@@ -752,7 +752,7 @@
       "pendingLongBar": 15030,
       "pendingShortBar": 15169,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "AAVE/USDT": {
       "waitLB": false,
@@ -762,7 +762,7 @@
       "pendingLongBar": 16403,
       "pendingShortBar": 15182,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "AVAX/USDT": {
       "waitLB": false,
@@ -772,7 +772,7 @@
       "pendingLongBar": 15660,
       "pendingShortBar": 15182,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "LTC/USDT": {
       "waitLB": true,
@@ -782,7 +782,7 @@
       "pendingLongBar": 15695,
       "pendingShortBar": 15169,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "DOT/USDT": {
       "waitLB": true,
@@ -792,7 +792,7 @@
       "pendingLongBar": 12291,
       "pendingShortBar": 14918,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ONDO/USDT": {
       "waitLB": false,
@@ -802,7 +802,7 @@
       "pendingLongBar": 13539,
       "pendingShortBar": 15182,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "FIL/USDT": {
       "waitLB": false,
@@ -812,7 +812,7 @@
       "pendingLongBar": 16061,
       "pendingShortBar": 16551,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "TRX/USDT": {
       "waitLB": false,
@@ -822,7 +822,7 @@
       "pendingLongBar": 3176,
       "pendingShortBar": 3517,
       "tradeState": -1,
-      "bar": 16555
+      "bar": 16576
     },
     "DYDX/USDT": {
       "waitLB": false,
@@ -832,7 +832,7 @@
       "pendingLongBar": 16368,
       "pendingShortBar": 16553,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "FET/USDT": {
       "waitLB": false,
@@ -852,7 +852,7 @@
       "pendingLongBar": 2289,
       "pendingShortBar": 4136,
       "tradeState": 1,
-      "bar": 16555
+      "bar": 16576
     },
     "INJ/USDT": {
       "waitLB": false,
@@ -862,7 +862,7 @@
       "pendingLongBar": 16061,
       "pendingShortBar": 13407,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "1000SHIB/USDT": {
       "waitLB": false,
@@ -882,7 +882,7 @@
       "pendingLongBar": 14848,
       "pendingShortBar": 14676,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "JUP/USDT": {
       "waitLB": false,
@@ -892,7 +892,7 @@
       "pendingLongBar": 15629,
       "pendingShortBar": 15985,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ARB/USDT": {
       "waitLB": true,
@@ -902,7 +902,7 @@
       "pendingLongBar": 16360,
       "pendingShortBar": 14537,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "TIA/USDT": {
       "waitLB": true,
@@ -912,7 +912,7 @@
       "pendingLongBar": 16244,
       "pendingShortBar": 14050,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "APT/USDT": {
       "waitLB": true,
@@ -922,7 +922,7 @@
       "pendingLongBar": 15695,
       "pendingShortBar": 15896,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "OP/USDT": {
       "waitLB": true,
@@ -932,7 +932,7 @@
       "pendingLongBar": 16360,
       "pendingShortBar": 15182,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ICP/USDT": {
       "waitLB": true,
@@ -942,7 +942,7 @@
       "pendingLongBar": 16248,
       "pendingShortBar": 15886,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "RENDER/USDT": {
       "waitLB": false,
@@ -952,7 +952,7 @@
       "pendingLongBar": 15670,
       "pendingShortBar": 15182,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "1000BONK/USDT": {
       "waitLB": false,
@@ -972,7 +972,7 @@
       "pendingLongBar": 16348,
       "pendingShortBar": 15382,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ALGO/USDT": {
       "waitLB": true,
@@ -982,7 +982,7 @@
       "pendingLongBar": 15000,
       "pendingShortBar": 13978,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "SEI/USDT": {
       "waitLB": true,
@@ -992,7 +992,7 @@
       "pendingLongBar": 16380,
       "pendingShortBar": 15897,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "LDO/USDT": {
       "waitLB": false,
@@ -1002,7 +1002,7 @@
       "pendingLongBar": 16271,
       "pendingShortBar": 15540,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ORDI/USDT": {
       "waitLB": false,
@@ -1012,7 +1012,7 @@
       "pendingLongBar": 15519,
       "pendingShortBar": 16275,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "CRV/USDT": {
       "waitLB": false,
@@ -1022,7 +1022,7 @@
       "pendingLongBar": 16310,
       "pendingShortBar": 15885,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "S/USDT": {
       "waitLB": true,
@@ -1032,7 +1032,7 @@
       "pendingLongBar": 14980,
       "pendingShortBar": 14574,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ETC/USDT": {
       "waitLB": true,
@@ -1042,7 +1042,7 @@
       "pendingLongBar": 14183,
       "pendingShortBar": 15580,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "ATOM/USDT": {
       "waitLB": true,
@@ -1052,7 +1052,7 @@
       "pendingLongBar": 9735,
       "pendingShortBar": 15182,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "PYTH/USDT": {
       "waitLB": false,
@@ -1062,7 +1062,7 @@
       "pendingLongBar": 15593,
       "pendingShortBar": 16518,
       "tradeState": 0,
-      "bar": 16555
+      "bar": 16576
     },
     "CHZ/USDT": {
       "waitLB": false,
@@ -1072,60 +1072,60 @@
       "pendingLongBar": 1685,
       "pendingShortBar": 3574,
       "tradeState": -1,
-      "bar": 16555
+      "bar": 16576
     }
   },
   "last_processed": {
-    "BTC/USDT": "2026-08-04 22:42:00",
-    "ETH/USDT": "2026-08-04 22:42:00",
-    "SOL/USDT": "2026-08-04 22:42:00",
-    "HYPE/USDT": "2026-08-04 22:42:00",
-    "ZEC/USDT": "2026-08-04 22:42:00",
-    "XRP/USDT": "2026-08-04 22:42:00",
-    "WLD/USDT": "2026-08-04 22:42:00",
+    "BTC/USDT": "2026-08-04 23:45:00",
+    "ETH/USDT": "2026-08-04 23:45:00",
+    "SOL/USDT": "2026-08-04 23:45:00",
+    "HYPE/USDT": "2026-08-04 23:45:00",
+    "ZEC/USDT": "2026-08-04 23:45:00",
+    "XRP/USDT": "2026-08-04 23:45:00",
+    "WLD/USDT": "2026-08-04 23:45:00",
     "TAIKO/USDT": null,
-    "DOGE/USDT": "2026-08-04 22:42:00",
-    "BNB/USDT": "2026-08-04 22:42:00",
-    "ADA/USDT": "2026-08-04 22:42:00",
-    "UNI/USDT": "2026-08-04 22:42:00",
+    "DOGE/USDT": "2026-08-04 23:45:00",
+    "BNB/USDT": "2026-08-04 23:45:00",
+    "ADA/USDT": "2026-08-04 23:45:00",
+    "UNI/USDT": "2026-08-04 23:45:00",
     "1000PEPE/USDT": null,
-    "NEAR/USDT": "2026-08-04 22:42:00",
-    "SUI/USDT": "2026-08-04 22:42:00",
-    "LINK/USDT": "2026-08-04 22:42:00",
-    "XLM/USDT": "2026-08-04 22:42:00",
-    "ENA/USDT": "2026-08-04 22:42:00",
-    "AAVE/USDT": "2026-08-04 22:42:00",
-    "AVAX/USDT": "2026-08-04 22:42:00",
-    "LTC/USDT": "2026-08-04 22:42:00",
-    "DOT/USDT": "2026-08-04 22:42:00",
-    "ONDO/USDT": "2026-08-04 22:42:00",
-    "FIL/USDT": "2026-08-04 22:42:00",
-    "TRX/USDT": "2026-08-04 22:42:00",
-    "DYDX/USDT": "2026-08-04 22:42:00",
+    "NEAR/USDT": "2026-08-04 23:45:00",
+    "SUI/USDT": "2026-08-04 23:45:00",
+    "LINK/USDT": "2026-08-04 23:45:00",
+    "XLM/USDT": "2026-08-04 23:45:00",
+    "ENA/USDT": "2026-08-04 23:45:00",
+    "AAVE/USDT": "2026-08-04 23:45:00",
+    "AVAX/USDT": "2026-08-04 23:45:00",
+    "LTC/USDT": "2026-08-04 23:45:00",
+    "DOT/USDT": "2026-08-04 23:45:00",
+    "ONDO/USDT": "2026-08-04 23:45:00",
+    "FIL/USDT": "2026-08-04 23:45:00",
+    "TRX/USDT": "2026-08-04 23:45:00",
+    "DYDX/USDT": "2026-08-04 23:45:00",
     "FET/USDT": null,
-    "HBAR/USDT": "2026-08-04 22:42:00",
-    "INJ/USDT": "2026-08-04 22:42:00",
+    "HBAR/USDT": "2026-08-04 23:45:00",
+    "INJ/USDT": "2026-08-04 23:45:00",
     "1000SHIB/USDT": null,
-    "WIF/USDT": "2026-08-04 22:42:00",
-    "JUP/USDT": "2026-08-04 22:42:00",
-    "ARB/USDT": "2026-08-04 22:42:00",
-    "TIA/USDT": "2026-08-04 22:42:00",
-    "APT/USDT": "2026-08-04 22:42:00",
-    "OP/USDT": "2026-08-04 22:42:00",
-    "ICP/USDT": "2026-08-04 22:42:00",
-    "RENDER/USDT": "2026-08-04 22:42:00",
+    "WIF/USDT": "2026-08-04 23:45:00",
+    "JUP/USDT": "2026-08-04 23:45:00",
+    "ARB/USDT": "2026-08-04 23:45:00",
+    "TIA/USDT": "2026-08-04 23:45:00",
+    "APT/USDT": "2026-08-04 23:45:00",
+    "OP/USDT": "2026-08-04 23:45:00",
+    "ICP/USDT": "2026-08-04 23:45:00",
+    "RENDER/USDT": "2026-08-04 23:45:00",
     "1000BONK/USDT": null,
-    "MANA/USDT": "2026-08-04 22:42:00",
-    "ALGO/USDT": "2026-08-04 22:42:00",
-    "SEI/USDT": "2026-08-04 22:42:00",
-    "LDO/USDT": "2026-08-04 22:42:00",
-    "ORDI/USDT": "2026-08-04 22:42:00",
-    "CRV/USDT": "2026-08-04 22:42:00",
-    "S/USDT": "2026-08-04 22:42:00",
-    "ETC/USDT": "2026-08-04 22:42:00",
-    "ATOM/USDT": "2026-08-04 22:42:00",
-    "PYTH/USDT": "2026-08-04 22:42:00",
-    "CHZ/USDT": "2026-08-04 22:42:00"
+    "MANA/USDT": "2026-08-04 23:45:00",
+    "ALGO/USDT": "2026-08-04 23:45:00",
+    "SEI/USDT": "2026-08-04 23:45:00",
+    "LDO/USDT": "2026-08-04 23:45:00",
+    "ORDI/USDT": "2026-08-04 23:45:00",
+    "CRV/USDT": "2026-08-04 23:45:00",
+    "S/USDT": "2026-08-04 23:45:00",
+    "ETC/USDT": "2026-08-04 23:45:00",
+    "ATOM/USDT": "2026-08-04 23:45:00",
+    "PYTH/USDT": "2026-08-04 23:45:00",
+    "CHZ/USDT": "2026-08-04 23:45:00"
   },
   "day": "2026-08-04",
   "day_start_equity": 995.6188859194826,
