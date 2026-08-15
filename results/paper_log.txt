@@ -5372,3 +5372,10 @@
 [2026-08-15 12:31:20Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
 [2026-08-15 12:31:28Z]   (5/50 sembol bu tikte atlandi)
 [2026-08-15 12:31:28Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
+[2026-08-15 13:14:25Z] Durum yuklendi: equity=995.62 halted=True
+[2026-08-15 13:14:30Z] TAIKO/USDT: warmup tamam (1399 mum), son=2026-08-15 13:09:00
+[2026-08-15 13:14:33Z] 1000PEPE/USDT: warmup tamam (1399 mum), son=2026-08-15 13:09:00
+[2026-08-15 13:14:41Z] FET/USDT: warmup tamam (1399 mum), son=2026-08-15 13:09:00
+[2026-08-15 13:14:42Z] 1000SHIB/USDT: warmup tamam (1399 mum), son=2026-08-15 13:09:00
+[2026-08-15 13:14:47Z] 1000BONK/USDT: warmup tamam (1399 mum), son=2026-08-15 13:09:00
+[2026-08-15 13:14:53Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
