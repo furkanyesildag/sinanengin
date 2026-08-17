@@ -6199,3 +6199,5 @@
 [2026-08-17 22:59:44Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
 [2026-08-17 23:32:12Z] Durum yuklendi: equity=995.62 halted=True
 [2026-08-17 23:32:41Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
+[2026-08-17 23:55:27Z] Durum yuklendi: equity=995.62 halted=True
+[2026-08-17 23:55:57Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
