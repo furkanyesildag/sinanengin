@@ -9190,3 +9190,6 @@
 [2026-09-05 23:22:20Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
 [2026-09-05 23:22:29Z]   (5/50 sembol bu tikte atlandi)
 [2026-09-05 23:22:29Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
+[2026-09-06 01:12:32Z] Durum yuklendi: equity=995.62 halted=True
+[2026-09-06 01:13:01Z] Yeni gun 2026-09-06: gun basi equity=995.62
+[2026-09-06 01:13:01Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
