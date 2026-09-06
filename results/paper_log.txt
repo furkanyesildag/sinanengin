@@ -9193,3 +9193,5 @@
 [2026-09-06 01:12:32Z] Durum yuklendi: equity=995.62 halted=True
 [2026-09-06 01:13:01Z] Yeni gun 2026-09-06: gun basi equity=995.62
 [2026-09-06 01:13:01Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
+[2026-09-06 06:01:59Z] Durum yuklendi: equity=995.62 halted=True
+[2026-09-06 06:02:28Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
