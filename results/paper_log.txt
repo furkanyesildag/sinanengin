@@ -10524,3 +10524,11 @@
 [2026-10-06 23:04:29Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
 [2026-10-06 23:04:40Z]   (4/50 sembol bu tikte atlandi)
 [2026-10-06 23:04:40Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
+[2026-10-07 02:20:41Z] Durum yuklendi: equity=995.62 halted=True
+[2026-10-07 02:20:48Z] ATLA TAIKO/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (TAIKO/USDT): bybit GET https://api.bybit.com/v5/market/instruments-in
+[2026-10-07 02:20:51Z] ATLA 1000PEPE/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000PEPE/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-10-07 02:21:03Z] ATLA 1000SHIB/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000SHIB/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-10-07 02:21:09Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
+[2026-10-07 02:21:18Z]   (4/50 sembol bu tikte atlandi)
+[2026-10-07 02:21:18Z] Yeni gun 2026-10-07: gun basi equity=995.62
+[2026-10-07 02:21:18Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
