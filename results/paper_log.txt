@@ -10777,3 +10777,5 @@
 [2026-10-14 19:32:21Z] ATLA 1000BONK/USDT: veri/isleme hatasi: Tum veri kaynaklari basarisiz (1000BONK/USDT): bybit GET https://api.bybit.com/v5/market/instruments
 [2026-10-14 19:32:34Z]   (4/50 sembol bu tikte atlandi)
 [2026-10-14 19:32:34Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
+[2026-10-14 22:35:41Z] Durum yuklendi: equity=995.62 halted=True
+[2026-10-14 22:36:11Z] TIK: equity=995.62 mtm=995.62 acik=0 islem=40 halted=True
